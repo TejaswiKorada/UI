@@ -1,106 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <style>
+        h1 {
+            text-align: center;
+            color: blueviolet;
+        }
+        th
+        {
+            color: rgb(176, 129, 138);
+        }
+        p
+        {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h1>College Aplication form</h1>
+    <hr>
+    <form action="hello.java" method="get">  
+        <p id="1"><Strong><em>1.Personal Details</em></Strong></p>
+        <table>
+            <tr>
+               <th><label for="fnam">First Name :</label></th>
+               <td><input type="text" id="fnam" name="Fname" /></td>
+               <th> </th>
+               <td> </td>
+            
+            
+               <th><label for="lnam">Last Name :</label></th>
+               <td><input type="text" id="lnam" name="Lname" /></td>
+            </tr>
+            <tr>
+                <th><label for="em">Email :</label></th>
+                <td><input type="email" id="em" name="email" /></td>
+                <th></th>
+                <td></td>
+               
+                <th><label for="pm">Phone No :</label></th>
+                <td><input type="tel" id="pm" name="Phoneno" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" /></td>
+             </tr>
+             <tr>
+                <th><label for="fm">Father name</label></th>
+                <td><input type="text" id="fm" name="father" /></td>
+                <th></th>
+                <td></td>
+               
+                <th><label for="mm">Mother name</label></th>
+                <td><input type="text" id="mm" name="Phoneno"/></td>
+             </tr>
+             <tr>
+            <th>Choose your gender:</th>
+            <td><input type="radio" name="gender" value="M" id="rd"><label for="rd">Male</label>
+            <input type="radio" name="gender" value="F" id="rd1"><label for="rd1">Female</label>
+            <input type="radio" name="gender" value="O" id="rd2"><label for="rd2">Others</label></td>
+            <th></th>
+            <td></td>
+            <th><label for="dob">Date of Birth :</label></th>
+            <td><input type="date" id="dob" name="dob" /></td>
+            <tr>
+                <th><label for="ad">Present Address</label></th>
+                <td>
+                    <textarea  rows="3" cols="50"></textarea>
+                </td>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Forms</title>
-        <style>
-            h1 {
-                text-align: center;
-            }
-        </style>
-    </head>
+                <th></th>
+                <td></td>
 
-    <body>
-        <h1>My Form</h1>
-        <form action="file.php" method="get">
-     <p>Note: all Elements contains * are mandatory </p>
-            <div>
-                <label for="fnam">First Name*:</label>
-                <input type="text" id="fnam" placeholder="enter name" name="fname" required minlength="8"/>
-            </div>
-            <br>
-            <div>
-                <label for="lnam">Last name:</label>
-                <input type="text" id="lnam"  value="patel" placeholder="enter your last name" name="lname" disabled />
-            </div>
-            <br>
-            <div>
-                <label for="em">Email</label>
-                <input type="text" id="em" placeholder="Enter your email" value="raj" name="email" readonly  />
-                <input type="hidden" name="jobrole" value="developer">
-            </div>
-            <br>
-            <div>
-                <label for="pw">Password</label>
-                <input type="password" id="pw" placeholder="Enter your Password" name="pswd" />
-            </div>
-            <br>
-            <div>
-                <label for="age">Age</label>
-                <input type="number" id="age" placeholder="Enter your Age" name="age" min="20" max="80" />
-            </div>
-            <br>
-            <div>
-                <label for="dob">Date of Birth</label>
-                <input type="time" id="dob" name="dob" />
-            </div>
-            <br>
-            <div>
-                <label for="dob">Date of Birth</label>
-                <input type="file" id="dob" name="dob" />
-            </div>
-            <br>
-            <div>
-                <label for="clr">Date of Birth</label>
-                <input type="color" id="clr" name="color" />
-            </div>
-            <br>
-            <!-- <input type="image" src="./image.jpg" alt="img"> -->
-            <!-- <input type="range" name="" id="">
-           <input type="url" name="" id="">
-           <input type="week" name="" id=""> -->
-            <!-- radio button -->
-            <p>Choose your gender:</p>
-            <input type="radio" name="gender" value="sharukh" id="rd"><label for="rd">Male</label>
-            <input type="radio" name="gender" value="alia" id="rd1"><label for="rd1">Female</label>
+                <th><label for="ad">Permanent Address</label></th>
+                <td>
+                    <textarea  rows="3" cols="50"></textarea>
+                </td>
 
-            <!--Checkboxes-->
-            <p>Checkboxes:</p>
-            <input type="checkbox" name="skills" value="html" id="c1"><label for="c1">HTML</label>
-            <input type="checkbox" name="skills" value="css" id="c3"><label for="c3">CSS</label>
-            <input type="checkbox" name="skills1" value="js" id="c2"><label for="c2">JS</label>
-            <!---->
-            <br><br>
-            <label for="">Choose Gender</label>
-            <select name="genderr" id="">
-                <option value="m">Male</option>
-                <option value="f">Female</option>
-                <option value="others">Others</option>
+                <th></th>
+                <td></td>
+        
+            
+            </tr>
+        </table>
 
-            </select>
-            <br><br>
-            <p>Choose Vehicle</p>
-            <select name="vehicle" id="" multiple>
-                <optgroup label="bikes">
-                    <option value="br15">R15</option>
-                    <option value="pulsur">Pulsur</option>
-                    <option value="duke">Duke</option>
-                </optgroup>
-                <optgroup label="cars">
-                    <option value="bmw">BMW</option>
-                    <option value="lamborgini">Lamborgini</option>
-                </optgroup>
-            </select>
+    <p id="2"><Strong><em>2.Course Details</em></Strong></p>
+    <table>
+        <tr>
+            <th>Mode of Study</th>
+            <td><input type="radio" name="Mode" value="p" id="rd3"><label for="rd3">Part-Time</label>
+            <input type="radio" name="Mode" value="F" id="rd4"><label for="rd4">Full-Time</label>
+            <input type="radio" name="Mode" value="D" id="rd5"><label for="rd5">Distance</label></td>
+        </tr>
+            <th></th>
+            <td></td>
+        <tr>
+            <th>Courses</th>
+            <td><input type="radio" name="course" value="C" id="rd6"><label for="rd6">CSE</label>
+            <input type="radio" name="course" value="Ec" id="rd7"><label for="rd7">ECE</label>
+            <input type="radio" name="course" value="IT" id="rd8"><label for="rd8">IT</label></td>
+        </tr>
+    </table>
+    <p id="3"><Strong><em>3.Documents</em></Strong></p>
+    <table>
+        <tr>
+        <th>Passport photo</th>
+        <td>
+        <input type="file" id="myFile" name="Passport">
+        <input type="submit"></td>
+        </tr>
+        <th></th>
+        <td></td>
+        <tr>
+        <th>Photo ID</th>
+        <td>
+        <input type="file" id="myFile" name="Photo ID">
+        <input type="submit"></td>
+        </tr>
+        <th></th>
+        <td></td>
+        <tr>
+        <th>10<sup>th</sup>Marksheet</th>
+        <td>
+        <input type="file" id="myFile" name="10">
+        <input type="submit"></td>
+        </tr>
+        <th>12<sup>th</sup>Marksheet</th>
+        <td>
+        <input type="file" id="myFile" name="12">
+        <input type="submit"></td>
+    </tr>
+    </table>
+    <br>
+    <br>
+    <input type="submit">
+    <input type="reset"> 
+        
+    </form>
 
 
-            <input type="submit">
-            <input type="reset">
-        </form>
-
-
-
-    </body>
-
+    
+</body>
 </html>
